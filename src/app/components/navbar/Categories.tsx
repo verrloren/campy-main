@@ -25,9 +25,8 @@ export function Categories() {
 				<Container>
 					<div className="pt-4 bg-[#F4F4F4] flex flex-row items-center justify-between overflow-x-auto">
 						{categories.map((item) => (
-							<Suspense>
+							<Suspense key={item.label}>
 								<CategoryBox
-									key={item.label}
 									label={item.label}
 									selected={category === item.label}
 									icon={item.icon}
